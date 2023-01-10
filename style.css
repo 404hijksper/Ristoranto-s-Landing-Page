@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/*font-family: 'Roboto Condensed', sans-serif;*/
+
+/*-///////////////////////////////////////////////////////*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Light Theme */
+    --main-white: #EAEAEA
+    --main-red: #FF2E63
+    --main-black: #252A34
+    --main-blue: #08D9D6
+    
+    /* Dark Theme */
+    --main-dark-grey: #393E46
+    --main-dark-black: #222831
+}
+
+
+/*-////////////////////////// Body //////////////////////////*/
+
