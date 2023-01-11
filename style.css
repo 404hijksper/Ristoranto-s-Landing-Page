@@ -9,6 +9,7 @@
     margin: 0;
     box-sizing: border-box;
     transition: 0.2s;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -68,7 +69,6 @@ h3{
     display: block;
     position: fixed;
     width: 100%;
-    transition-duration: 1s;
     background-color: rgba(23, 23, 23, 0.1);
 }
 
@@ -109,7 +109,6 @@ h3{
 
 #top-nav a:hover{
     text-decoration: underline;
-    transition: 1s;
 }
 
 .booking-button{
@@ -117,7 +116,6 @@ h3{
     background-color: #000;
     border-radius: 20px;
     color: var(--main-white);
-    transition: 0.5s;
 }
 
 #main-container header{
@@ -131,11 +129,19 @@ h3{
 .bg-blob{
     padding: 0;
     margin: 0;
-    position: absolute;
+    position:absolute;
     top: -1000px;
     right: -1000px;
     z-index: -10;
 
+}
+
+.bg-blob-two{
+    position: absolute;
+    z-index: -10;
+    transform:scale(0.6) rotateZ(180deg);
+    left: -800px;
+    
 }
 
 .healthy-food-one{
@@ -143,6 +149,7 @@ h3{
     max-width: 200px;
     left: 0;
     bottom: -200px;
+    left: -20px;
 }
 
 /*-////////////////////////// Header //////////////////////////*/
@@ -201,6 +208,8 @@ h1{
     background-color: #FF2E63;
     border-radius: 50%;
     color: var(--main-white);
+    min-width: 78px;
+    min-height: 78px;
 }
 
 .info-card p{
@@ -214,7 +223,7 @@ h1{
     font-weight: 400;
 }
 
-/*-////////////////////////// Food Important //////////////////////////*/
+/*-////////////////////////// Food Important / about //////////////////////////*/
 
 .food-important{
     margin-top: 150px;
@@ -241,7 +250,7 @@ h1{
 }
 
 .important-food-article p{
-    padding:5px 0;
+    padding:15px 0;
 }
 
 .important-info{
@@ -281,6 +290,8 @@ h1{
     font-weight: 600;
 }
 
+/*-////////////////////////// Work  //////////////////////////*/
+
 .food-preparation-container-botton{
     margin-top: 150px;
     display: flex;
@@ -308,8 +319,8 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-color: #fff;
+    min-height: 100%;
     padding: 20px 10px;
     width: 300px;
     margin: 0 20px;
@@ -318,11 +329,20 @@ h1{
     text-align: center;
 }
 
+.work-card-icon{
+    background-color: #FF2E63;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 68px;
+    max-height: 68px;
+}
+
 .work-card i{
     padding: 20px;
     font-size: 28px;
-    background-color: #FF2E63;
-    border-radius: 50%;
     color: var(--main-white);
 }
 
@@ -334,4 +354,244 @@ h1{
 .work-card:hover{
     cursor: pointer;
     transform: scale(1.02);
+}
+
+/*-////////////////////////// Menu  //////////////////////////*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+
+.main-menu-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-menu{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: repeat(2, 430px);
+    column-gap: 30px;
+}
+
+.main-menu-top p{
+    padding: 5px 0;
+}
+
+.main-menu-card{
+    width: 300px;
+}
+
+.main-menu-card-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 0px 60px 0 60px;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+
+.main-menu-card-food-info{
+    width: 299px;
+    height: 200px;
+    background-color: #fff;
+    padding-top: 60px;
+    margin-top: -50px;
+}
+
+
+.main-menu-card-food-info-plate{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.main-menu-card-food-info-plate-name-and-price{
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+}
+
+.plate-description{
+    font-size: 12px;
+}
+
+.plate-information{
+    padding-top: 10px;
+}
+
+.plate-purchase{
+    width: 100%;
+    margin-top: -1px;
+    height: 41px;
+    max-height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.stars{
+    padding-left: 5%;
+}
+
+.stars i:hover, .stars-review:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.add-plate-to-cart button{
+    padding: 10px 20px;
+    max-height: 41px;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    background: var(--main-red);
+    color: var(--main-white);
+    border-radius: 20px 0 0 0;
+    margin-right:1px ;
+}
+
+.add-plate-to-cart button:hover{
+    cursor: pointer;
+    color: #fff;
+    border-radius: 10px 0 0 0 ;
+}
+
+/*-////////////////////////// Revies  //////////////////////////*/
+
+.healthy-food-two{
+    position: absolute;
+    width: 400px;
+    right: 0;
+    margin-right: -200px;
+}
+
+.reviews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.reviews-header{
+    text-align: center;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.reviews h2, .reviews p{
+    padding-top: 10px;
+}
+
+.client-review{
+    margin-top: 60px;
+    min-width: 40%;
+    width: 40%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 20px 10px;
+    box-shadow: 0px 0px 4px rgba(23, 23, 23, 0.2);
+}
+.client-pic{
+    width: 100px;
+    border-radius: 50%;
+    border: solid 4px var(--main-red);
+}
+
+.client-pic:hover{
+    cursor: pointer;
+}
+
+.client-review blockquote {
+    padding: 20px 0;
+    text-align: center;
+    max-width: 60%;
+}
+
+.contact{
+    margin-top: 60px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-header h2, .contact-header span{
+    padding: 10px 0;
+}
+
+.form-contact{
+    margin-top: 30px;
+    background: #fff;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.mail-input{
+    padding: 10px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+}
+.mail-input:focus{
+    outline: none;
+}
+
+footer{
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: wrap;
+    width: 100%;
+    min-width: 100%;
+    justify-content: space-around;
+}
+
+.footer-social-name span{
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.footer-social-rrss{
+    font-weight: 28px;
+}
+
+.footer-social-rrss a{
+    padding: 10px 10px 0 0;
+}
+
+.footer-nav nav{
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: bolder;
+}
+
+.footer-info{
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
 }
